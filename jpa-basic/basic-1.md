@@ -1,4 +1,4 @@
-##ORM과 SQL Mapper 차이
+## ORM과 SQL Mapper 차이
 
 #### ORM (Object Relational Mapping)
 - 객체 관계 매핑, 객체와 RDB를 매핑시켜 DB의 테이블을 객체지향적으로 사용하기 위한 기술<br/>
