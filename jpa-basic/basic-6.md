@@ -62,4 +62,15 @@ DTO와 같은 의미있는 객체로 변환이 가능, SELECT 절에서 new 키�
 
 <br/>
 
-- 
+#### 서브쿼리
+- JPQL도 SQL 처럼 서브 쿼리를 지원함
+- WHERE 절 서브쿼리 예시    
+`select m from Member m where m.age > (select avg(m2.age) from Member m2)`
+- 서브쿼리 함수 종류    
+`EXISTS`, `[ALL|ANY|SOME]`, `IN`
+
+#### JPA 서브 쿼리 한계
+- JPA는 WHERE, HAVING 절에서만 서브쿼리가 사용이 가능하다
+- SELECT 절도 가능하지만 JPA 표준이 아닌 하이버네이트에서 지원해줌
+- FROM 절의 서브 쿼리는 현재 JPQL에서 불가능하다
+     - Join 으로 풀어서 할 수 있으면 Join
